@@ -52,7 +52,7 @@ class NavBar extends React.Component{
                 </ul>
             </div>
             <div className = "NavBarToggleDiv" style={{marginLeft: marginVal}}>
-                <button className = "" onClick = {this.handleClick}>☰</button>
+                <button onClick = {this.handleClick}>☰</button>
             </div>
         </div>
         )
