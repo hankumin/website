@@ -1,4 +1,4 @@
-.NavBar {
+div.NavBar {
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -11,8 +11,22 @@
     opacity: 80%;
 }
 
-.NavBarToggleDiv{
+div.NavBarToggleDiv{
     transition: margin-left 0.5s;
     text-align: left;
     padding: 16px;
+
+}
+
+ul.NavBar{
+    list-style-position: inside;
+    list-style-type: none;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.NavLinkInactive{
+    color: whitesmoke;
+    text-decoration: none;
 }
