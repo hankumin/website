@@ -36,7 +36,7 @@ class NavBar extends React.Component{
         const listOfLinks = []
         this.state.NavigationLinks.forEach((element,index) => {
             listOfLinks.push(<li key={index}>
-                <NavLink to ={element.path}>
+                <NavLink className='NavLinkInactive' to ={element.path}>
                     {element.link}
                 </NavLink>
             </li>)
@@ -47,10 +47,12 @@ class NavBar extends React.Component{
         return(
             <div>
             <div className = 'NavBar'  style={{width: marginVal}}>
-                {listOfLinks}
+                <ul className='NavBar'>
+                    {listOfLinks}
+                </ul>
             </div>
-            <div className ='NavBarToggleDiv' style={{marginLeft: marginVal}}>
-                <button className='' onClick = {this.handleClick}>☰</button>
+            <div className = 'NavBarToggleDiv' style={{marginLeft: marginVal}}>
+                <button onClick = {this.handleClick}>☰</button>
             </div>
         </div>
         )
