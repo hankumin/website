@@ -8,8 +8,8 @@ class NavBar extends React.Component{
         this.state={
             sideBarRender: false,
             NavigationLinks: [
-                {link: "Home", path: "/"},
-                {link: "Resume", path: "/resume"},
+                {link: 'Home', path: '/'},
+                {link: 'Resume', path: '/resume'},
             ]
         }
 
@@ -32,18 +32,18 @@ class NavBar extends React.Component{
 
     checkRenderSlideIn( renderFlag){
         if(renderFlag){
-            return "20%";
+            return '20%';
         }
         else{
-            return "0%"
+            return '0%'
         }
     }
 
     render(){
         const listOfLinks = []
         this.state.NavigationLinks.forEach((element,index) => {
-            listOfLinks.push(<li className="NavBar" key={index}>
-                <NavLink className="NavLinkInactive" to ={element.path}>
+            listOfLinks.push(<li key={index}>
+                <NavLink className='NavLinkInactive' to ={element.path}>
                     {element.link}
                 </NavLink>
             </li>)
@@ -53,16 +53,16 @@ class NavBar extends React.Component{
 
         return(
             <div>
-                <div className = "NavBar" style={{width: marginVal}}>
+                <div className = 'NavBar' style={{width: marginVal}}>
                     <div>
-                        <button className="NavBarCloseDiv" onClick={this.closeSlideIn}>&#10006;</button>
+                        <button className='NavBarCloseDiv' onClick={this.closeSlideIn}>&#10006;</button>
                     </div>
-                    <ul className="NavBar">
+                    <ul className='NavBar'>
                         {listOfLinks}
                     </ul>
                 </div>
-                <div className = "NavBarToggleDiv" style={{marginLeft: marginVal}}>
-                    <button className="NavBarToggleDiv" onClick  = {this.handleClick}>☰</button>
+                <div className = 'NavBarToggleDiv' style={{marginLeft: marginVal}}>
+                    <button className='NavBarToggleDiv' onClick  = {this.handleClick}>☰</button>
                 </div>
             </div>
         )

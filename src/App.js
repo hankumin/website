@@ -19,16 +19,16 @@ class App extends React.Component {
   render() {
     
     return (
-      <div className="App"> 
+      <div className='App'> 
         <header >
           <Router>
             <div>
               <NavBar/>
             </div>
-            <div className = "body">
+            <div className = 'body'>
               <Routes>
-                <Route exact path="/" element={<MainPage/>} />
-                <Route exact path="/resume" element={<Resume/>} />
+                <Route exact path='/' element={<MainPage/>} />
+                <Route exact path='/resume' element={<Resume/>} />
               </Routes>
             </div>
           </Router>
