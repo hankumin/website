@@ -15,12 +15,19 @@ class NavBar extends React.Component{
 
         this.handleClick = this.handleClick.bind(this);
         this.checkRenderSlideIn = this.checkRenderSlideIn.bind(this)
+        this.closeSlideIn = this.closeSlideIn.bind(this);
     }
 
     handleClick(){
         this.setState(prevState => ({
             sideBarRender: !prevState.sideBarRender,
         }));
+    }
+
+    closeSlideIn(){
+        this.setState({
+            sideBarRender: false
+        })
     }
 
     checkRenderSlideIn( renderFlag){
@@ -35,7 +42,7 @@ class NavBar extends React.Component{
     render(){
         const listOfLinks = []
         this.state.NavigationLinks.forEach((element,index) => {
-            listOfLinks.push(<li key={index}>
+            listOfLinks.push(<li className="NavBar" key={index}>
                 <NavLink className="NavLinkInactive" to ={element.path}>
                     {element.link}
                 </NavLink>
@@ -46,15 +53,18 @@ class NavBar extends React.Component{
 
         return(
             <div>
-            <div className = "NavBar"  style={{width: marginVal}}>
-                <ul className="NavBar">
-                    {listOfLinks}
-                </ul>
+                <div className = "NavBar" style={{width: marginVal}}>
+                    <div>
+                        <button className="NavBarCloseDiv" onClick={this.closeSlideIn}>&#10006;</button>
+                    </div>
+                    <ul className="NavBar">
+                        {listOfLinks}
+                    </ul>
+                </div>
+                <div className = "NavBarToggleDiv" style={{marginLeft: marginVal}}>
+                    <button className="NavBarToggleDiv" onClick  = {this.handleClick}>☰</button>
+                </div>
             </div>
-            <div className = "NavBarToggleDiv" style={{marginLeft: marginVal}}>
-                <button onClick = {this.handleClick}>☰</button>
-            </div>
-        </div>
         )
     }
 }
