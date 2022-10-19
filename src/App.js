@@ -22,13 +22,13 @@ class App extends React.Component {
       <div className='App'> 
         <header >
           <Router>
-            <div>
+            <div className='NavigationBar'>
               <NavBar/>
             </div>
             <div className = 'body'>
               <Routes>
-                <Route exact path='/' element={<MainPage/>} />
-                <Route exact path='/resume' element={<Resume/>} />
+                <Route exact={true} path='/' element={<MainPage/>} />
+                <Route exact={true} path='/resume' element={<Resume/>} />
               </Routes>
             </div>
           </Router>

@@ -1,15 +1,29 @@
 div.NavBar {
-    height: 100%;
+    height: 98%;
     position: fixed;
     z-index: 1;
     top: 0px;
     left: 0px;
-    background-color: #111;
+    background-color: gray;
     overflow-x: hidden;
     padding-top: 17px;
     transition: 0.5s;
-    opacity: 80%;
     text-align: left;
+    border-radius: 0px 25px 25px 0px;
+}
+
+div.NavBar-On{
+    width:25%;
+}
+
+@media only screen and (max-width: 600px){
+    div.NavBar-On{
+        width:45%;
+    }
+}
+
+div.NavBar-Off{
+    width: 0%;
 }
 
 div.NavBarToggleDiv{
@@ -18,6 +32,21 @@ div.NavBarToggleDiv{
     padding: 16px;
 
 }
+
+div.NavBarToggleDiv-On{
+    margin-left: 25%;
+}
+
+@media only screen and (max-width: 600px){
+    div.NavBarToggleDiv-On{
+        margin-left: 45%;
+    }
+}
+
+div.NavBarToggleDiv-Off{
+    margin-left: 0%;
+}
+
 
 button.NavBarToggleDiv{
     padding: 0;
@@ -29,7 +58,7 @@ button.NavBarToggleDiv{
 
 button.NavBarCloseDiv{
     color: white;
-    background-color: #111;
+    background-color: gray;
     padding: 0;
     border: none;
     margin-left: 17px;
@@ -42,13 +71,31 @@ ul.NavBar{
     list-style-type: none;
     font-size: 30px;
     font-weight: 500;
+    padding-left: 0px;
 }
 
 li.NavBar{
-    margin-bottom: 20px;
+    width:100%;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+}
+
+.NavLink{
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+    padding-left: 5%;
+    display: inline-block;
+}
+
+.NavLinkActive{
+    border-top: darkgray solid 1px;
+    border-bottom: darkgray solid 1px;
 }
 
 .NavLinkInactive{
-    color: whitesmoke;
-    text-decoration: none;
+    border-top: 0px;
+    border-bottom: 0px;
 }

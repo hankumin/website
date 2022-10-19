@@ -2,3 +2,6 @@
   text-align: center;
 }
 
+.NavigationBar{
+  z-index: 1
+}

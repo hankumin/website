@@ -32,28 +32,31 @@ class NavBar extends React.Component{
 
     checkRenderSlideIn( renderFlag){
         if(renderFlag){
-            return '20%';
+            return '-On';
         }
         else{
-            return '0%'
+            return '-Off'
         }
     }
 
     render(){
         const listOfLinks = []
         this.state.NavigationLinks.forEach((element,index) => {
-            listOfLinks.push(<li key={index}>
-                <NavLink className='NavLinkInactive' to ={element.path}>
-                    {element.link}
+            listOfLinks.push(
+            <li className='NavBar' key={index}>
+                <NavLink exact="true" to={element.path} className={({ isActive }) => isActive ? 'NavLink NavLinkActive' : 'NavLink NavLinkInactive'} end>
+                    <div style={{width:'100%'}}>
+                        {element.link}
+                    </div>
                 </NavLink>
             </li>)
         });
 
-        const marginVal = this.checkRenderSlideIn(this.state.sideBarRender);
+        const toggleFlag = this.checkRenderSlideIn(this.state.sideBarRender);
 
         return(
             <div>
-                <div className = 'NavBar' style={{width: marginVal}}>
+                <div className = {'NavBar NavBar'+toggleFlag} >
                     <div>
                         <button className='NavBarCloseDiv' onClick={this.closeSlideIn}>&#10006;</button>
                     </div>
@@ -61,7 +64,7 @@ class NavBar extends React.Component{
                         {listOfLinks}
                     </ul>
                 </div>
-                <div className = 'NavBarToggleDiv' style={{marginLeft: marginVal}}>
+                <div className = {'NavBarToggleDiv NavBarToggleDiv'+toggleFlag} >
                     <button className='NavBarToggleDiv' onClick  = {this.handleClick}>☰</button>
                 </div>
             </div>
