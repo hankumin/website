@@ -8,8 +8,8 @@ class NavBar extends React.Component{
         this.state={
             sideBarRender: false,
             NavigationLinks: [
-                {link: "Home", path: "/"},
-                {link: "Resume", path: "/resume"},
+                {link: 'Home', path: '/'},
+                {link: 'Resume', path: '/resume'},
             ]
         }
 
@@ -25,10 +25,10 @@ class NavBar extends React.Component{
 
     checkRenderSlideIn( renderFlag){
         if(renderFlag){
-            return "20%";
+            return '20%';
         }
         else{
-            return "0%"
+            return '0%'
         }
     }
 
@@ -46,11 +46,11 @@ class NavBar extends React.Component{
 
         return(
             <div>
-            <div className = "NavBar"  style={{width: marginVal}}>
+            <div className = 'NavBar'  style={{width: marginVal}}>
                 {listOfLinks}
             </div>
-            <div className = "NavBarToggleDiv" style={{marginLeft: marginVal}}>
-                <button onClick = {this.handleClick}>☰</button>
+            <div className ='NavBarToggleDiv' style={{marginLeft: marginVal}}>
+                <button className='' onClick = {this.handleClick}>☰</button>
             </div>
         </div>
         )
