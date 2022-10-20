@@ -8,8 +8,8 @@ class NavBar extends React.Component{
         this.state={
             sideBarRender: false,
             NavigationLinks: [
-                {link: 'Home', path: '/'},
-                {link: 'Resume', path: '/resume'},
+                {link: 'Home', path: '/website/'},
+                {link: 'Resume', path: '/website/resume'},
             ]
         }
 

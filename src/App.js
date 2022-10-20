@@ -27,8 +27,8 @@ class App extends React.Component {
             </div>
             <div className = 'body'>
               <Routes>
-                <Route exact={true} path='/' element={<MainPage/>} />
-                <Route exact={true} path='/resume' element={<Resume/>} />
+                <Route exact={true} path='/website/' element={<MainPage/>} />
+                <Route exact={true} path='/website/resume' element={<Resume/>} />
               </Routes>
             </div>
           </Router>
