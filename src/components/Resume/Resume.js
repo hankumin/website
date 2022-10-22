@@ -2,21 +2,6 @@ import './Resume.css'
 import resumeImg from './Resume_10_19_20221024_1.jpg'
 import {FaDownload} from 'react-icons/fa'
 
-const onHandleClick = () => {
-    fetch('https://hankumin.github.io/website/public/Resume.pdf').then(response => {
-        response.blob().then(blob => {
-            const fileURL = window.URL.createObjectURL(blob);
-            let alink = document.createElement('a');
-            alink.href = fileURL;
-            alink.download = 'Calvin_Han_Resume.pdf';
-            alink.click();
-        })
-    })
-}
-
-// const initialState = {
-//     downloadedFlag: 'false'
-// }
 
 export function Resume(){
     
@@ -32,7 +17,7 @@ export function Resume(){
                 </div>
                 <img className='pdf' src={resumeImg} alt="Resume"/>   
                 <div>
-                    <button className='download' onClick={onHandleClick}><FaDownload /> Download</button>
+                    <a href="Resume.pdf" class="button"><FaDownload/>Download</a>
                 </div>
             </div>
             
