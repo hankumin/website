@@ -7,35 +7,25 @@ import {
   Route,
   BrowserRouter as Router
 } from 'react-router-dom';
-import React from 'react';
 
-class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-    };
-  }
-
-  render() {
-    
-    return (
-      <div className='App'> 
-        <header >
-          <Router>
-            <div className='NavigationBar'>
-              <NavBar/>
-            </div>
-            <div className = 'body'>
-              <Routes>
-                <Route exact={true} path='/website/' element={<MainPage/>} />
-                <Route exact={true} path='/website/resume' element={<Resume/>} />
-              </Routes>
-            </div>
-          </Router>
-        </header>
-      </div>
-    );
-  }
+export function App() {
+  return (
+    <div className='App'> 
+      <header >
+        <Router>
+          <div className='NavigationBar'>
+            <NavBar/>
+          </div>
+          <div style={{height: '100%'}}>
+            <Routes>
+              <Route exact={true} path='/website/' element={<MainPage/>} />
+              <Route exact={true} path='/website/resume' element={<Resume/>} />
+            </Routes>
+          </div>
+        </Router>
+      </header>
+    </div>
+  );
 }
 
 export default App;
