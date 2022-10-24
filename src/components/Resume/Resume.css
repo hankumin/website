@@ -74,19 +74,6 @@ div.paddingDiv{
     }
 }
 
-/* button.download{
-    background-color: #008CBA;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    
-} */
-
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -101,6 +88,7 @@ a.button {
     font-size: 16px;
     border-radius: 5px;
     border: none;
+    height: 30px;
 
     text-decoration: none;
     color: initial;
@@ -112,4 +100,14 @@ a.button:visited{
 
 a.button:link{
     color: white;
+}
+
+.button-content-1{
+    display: inline-block;
+}
+
+.button-content-2{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 0px;
 }
