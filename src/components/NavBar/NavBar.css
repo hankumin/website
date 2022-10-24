@@ -9,6 +9,7 @@ div.NavBar {
     padding-top: 15px;
     transition: 0.5s;
     text-align: left;
+    border: black solid 1px;
     border-radius: 0px 25px 25px 25px;
 }
 

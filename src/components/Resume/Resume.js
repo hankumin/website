@@ -32,7 +32,7 @@ export function Resume(){
                 </div>
                 <img className='pdf' src={resumeImg} alt="Resume"/>   
                 <div>
-                    <button className='download' onClick={onHandleClick}><FaDownload /> Download</button>
+                    <a href="Resume.pdf" class="button" target="_blank"><div><FaDownload className='button-content-1'/><p className='button-content-2'>Download</p></div></a>
                 </div>
             </div>
             
