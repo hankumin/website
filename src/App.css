@@ -7,3 +7,22 @@
   width: 20%;
   position: fixed;
 }
+
+div.header{
+  height: 10vh;
+  background-image: var(--gradient-rl);
+  display: flex;
+
+}
+
+div.footer{
+  height: 10vh;
+  background-image: var(--gradient-rl);
+}
+
+div.mainBody{
+  min-height: 85vh;
+  height: auto;
+  width:100%;
+  margin: 0px;
+}

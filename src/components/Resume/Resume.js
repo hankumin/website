@@ -1,27 +1,24 @@
-import './Resume.css'
 import resumeImg from './Resume_10_19_20221024_1.jpg'
 import {FaDownload} from 'react-icons/fa'
+import styles from './Resume.module.css'
 
 
 export function Resume(){
     
     return(
-        <div className='mainBody'>
-            <div className='header'/>
+        <div className={styles.mainBody}>
 
-            <div className='paddingDiv'>
-                <div className='title'>
-                    <div className='title-underLine'>
-                        <p className='title'>Resume</p>
+            <div className={styles.paddingDiv}>
+                <div className={styles.title}>
+                    <div className={styles.title_underLine}>
+                        <p className={styles.title}>Resume</p>
                     </div>
                 </div>
-                <img className='pdf' src={resumeImg} alt="Resume"/>   
+                <img className={styles.pdf} src={resumeImg} alt="Resume"/>   
                 <div>
-                    <a href="Resume.pdf" class="button" target="_blank"><div><FaDownload className='button-content-1'/><p className='button-content-2'>Download</p></div></a>
+                    <a href="Resume.pdf" className={styles.button} target="_blank"><div className={styles.button_content}><FaDownload/><p>Download</p></div></a>
                 </div>
             </div>
-            
-            <div className='footer'/>
         </div>
     );
         

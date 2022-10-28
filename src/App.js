@@ -2,6 +2,7 @@ import './App.css';
 import MainPage from './components/MainPage/MainPage'
 import Resume from './components/Resume/Resume'
 import NavBar from './components/NavBar/NavBar'
+import {FaLinkedin,FaGithub} from 'react-icons/fa'
 import {
   Routes,
   Route,
@@ -12,18 +13,25 @@ export function App() {
   return (
     <div className='App'> 
       <header >
-        <Router>
+        <div className='header'>
+          <FaLinkedin></FaLinkedin>
+          <FaGithub></FaGithub>
+        </div>
+      </header>
+      <Router>
           <div className='NavigationBar'>
             <NavBar/>
           </div>
-          <div style={{height: '100%'}}>
+          <div>
             <Routes>
               <Route exact={true} path='/website/' element={<MainPage/>} />
               <Route exact={true} path='/website/resume' element={<Resume/>} />
             </Routes>
           </div>
-        </Router>
-      </header>
+      </Router>
+      <footer>
+        <div className='footer'></div>
+      </footer>
     </div>
   );
 }
