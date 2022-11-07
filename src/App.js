@@ -14,8 +14,10 @@ export function App() {
     <div className='App'> 
       <header >
         <div className='header'>
-          <FaLinkedin></FaLinkedin>
-          <FaGithub></FaGithub>
+          <div className='headerLinks'>
+            <a href="https://www.linkedin.com/in/calvin-han-24857614a/" className='links' target="_blank"><FaLinkedin></FaLinkedin></a>
+            <a href="https://github.com/hankumin" className='links' target="_blank"><FaGithub></FaGithub></a>
+          </div>
         </div>
       </header>
       <Router>

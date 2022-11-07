@@ -12,7 +12,25 @@ div.header{
   height: 10vh;
   background-image: var(--gradient-rl);
   display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 
+}
+
+div.headerLinks{
+  width: 40px;
+  margin-right: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a.links{
+  color: black;
+}
+
+
+a.links:visited{
+  color: black;
 }
 
 div.footer{
