@@ -9,7 +9,7 @@
 }
 
 div.header{
-  height: 10vh;
+  height: 60px;
   background-image: var(--gradient-rl);
   display: flex;
   flex-direction: row-reverse;
@@ -34,7 +34,7 @@ a.links:visited{
 }
 
 div.footer{
-  height: 10vh;
+  height: 60px;
   background-image: var(--gradient-rl);
 }
 
