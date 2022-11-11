@@ -47,6 +47,7 @@ h1{
     background-image: var(--gradient-lr);
 
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
     padding-top: var(--padding-topandbot);
     padding-bottom: var(--padding-topandbot);
@@ -55,6 +56,15 @@ h1{
 
 
     height: 30vh;
+    animation: var(--divAnimation);
+}
+
+div.main_title_Left{
+    display: flex;
+    flex-direction: column;
+    width: clamp(200px, 100%, 600px);
+    text-align: left;
+    
 }
 
 div.main_title_Left{
@@ -67,4 +77,9 @@ div.main_title_Left{
 
 img.image{
     width: clamp(200px, 100%, 600px);
+}
+
+.list{
+    list-style-type: none;
+    text-align: left;
 }
